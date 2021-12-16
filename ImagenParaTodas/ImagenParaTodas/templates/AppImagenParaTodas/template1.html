@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="{%static 'AppImagen/css/styles.css' %}" rel="stylesheet" />
+
+    <title>Imagen personal </title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="{% url 'Vestir' %}"><i class="fa fa-home fa-fw"></i>Vestir</a></li>
+                <li><a href="{% url 'Tips' %}"><i class="fa fa-list-alt fa-fw"></i>Tips</a></li>
+                <li><a href="{% url 'Cuerpos' %}"><i class="fa fa-file-o fa-fw"></i>Cuerpos</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9 well">
+            {% block contenido %}
+            {% endblock %} 
+        </div>
+    </div>
+</div>
+</body>
+</html> 
